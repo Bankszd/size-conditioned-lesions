@@ -1,0 +1,30 @@
+{
+ "section": "H3 - deformable detectors, fixed four sampling pairs at decoder layer 2, VOC 2007 test",
+ "statistic": "Delta4 = E[L|small] - E[L|large], L = Q_clean - Q_lesion; 5,000 whole-image percentile resamples, PCG64 seed 20271001",
+ "script": "experiments/deformable/task_n2_deim_official.py, task_d2_rt.py; analysed by experiments/fixed_area/n_voc_analyze.py",
+ "models": {
+  "DEIMv2-S": {
+   "delta4": -0.000498,
+   "delta4_ci": [-0.001375, 0.000378],
+   "delta02": -0.000022,
+   "delta02_ci": [-0.000289, 0.000236],
+   "eligible_small": 310,
+   "eligible_medium": 1545,
+   "eligible_large": 4379,
+   "removed_mass_small": 0.038668,
+   "removed_mass_large": 0.042490
+  },
+  "RT-DETRv2-R50vd": {
+   "delta4": 0.001427,
+   "delta4_ci": [-0.000725, 0.004418],
+   "delta02": 0.000126,
+   "delta02_ci": [-0.000330, 0.000507],
+   "eligible_small": 291,
+   "eligible_medium": 1385,
+   "eligible_large": 4048,
+   "removed_mass_small": 0.037766,
+   "removed_mass_large": 0.043277
+  }
+ },
+ "verdict": "confirmed"
+}

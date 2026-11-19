@@ -1,0 +1,7 @@
+# Minimal environment for the CPU-only reproduction of every paper table.
+numpy==2.3.2
+scipy==1.18.1
+pycocotools==2.0.11
+pillow==11.3.0
+PyYAML==6.0.2
+pytest==8.3.4

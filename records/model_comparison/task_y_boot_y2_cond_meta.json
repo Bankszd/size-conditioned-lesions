@@ -1,0 +1,43 @@
+{
+ "arms": [
+  "clean",
+  "in4",
+  "in_prop0.50",
+  "in_geo0.50"
+ ],
+ "draws_file": "records/model_comparison/task_y_voc12_draws_2000.npy",
+ "model": "conditional_detr",
+ "n_boot": 2000,
+ "observed": {
+  "all_layers|clean|0": 0.6295504898783693,
+  "all_layers|clean|1": 0.23042530716808624,
+  "all_layers|clean|2": 0.7246185053474598,
+  "all_layers|in4|0": 0.6041811807360022,
+  "all_layers|in4|1": 0.08407613128554457,
+  "all_layers|in4|2": 0.7231745548465535,
+  "all_layers|in_geo0.50|0": 0.5850445535095454,
+  "all_layers|in_geo0.50|1": 0.17684525659794606,
+  "all_layers|in_geo0.50|2": 0.6953118196360978,
+  "all_layers|in_prop0.50|0": 0.5876684678948919,
+  "all_layers|in_prop0.50|1": 0.18807619082317392,
+  "all_layers|in_prop0.50|2": 0.6965229807736696,
+  "layer2|clean|0": 0.6295504898783693,
+  "layer2|clean|1": 0.23042530716808624,
+  "layer2|clean|2": 0.7246185053474598,
+  "layer2|in4|0": 0.6282252643001769,
+  "layer2|in4|1": 0.2165424171357912,
+  "layer2|in4|2": 0.7247378505824272,
+  "layer2|in_geo0.50|0": 0.6260548100201945,
+  "layer2|in_geo0.50|1": 0.22896101265506466,
+  "layer2|in_geo0.50|2": 0.722325882445926,
+  "layer2|in_prop0.50|0": 0.6265117393361318,
+  "layer2|in_prop0.50|1": 0.22790418724589676,
+  "layer2|in_prop0.50|2": 0.7227866147887144
+ },
+ "seed": 20271004,
+ "source": "records/model_comparison/task_yv_conditional_detr_merged.jsonl.gz",
+ "versions": [
+  "layer2",
+  "all_layers"
+ ]
+}

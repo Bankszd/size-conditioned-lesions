@@ -1,0 +1,29 @@
+{
+ "arms": [
+  "clean",
+  "in_prop0.50"
+ ],
+ "draws_file": "records/model_comparison/task_y_draws_2000.npy",
+ "model": "detr",
+ "n_boot": 2000,
+ "observed": {
+  "all_layers|clean|0": 0.42172706364471485,
+  "all_layers|clean|1": 0.22448780364462245,
+  "all_layers|clean|2": 0.6151348213576571,
+  "all_layers|in_prop0.50|0": 0.40069951346223076,
+  "all_layers|in_prop0.50|1": 0.1972344567293752,
+  "all_layers|in_prop0.50|2": 0.601839497162068,
+  "layer2|clean|0": 0.42172706364471485,
+  "layer2|clean|1": 0.22448780364462245,
+  "layer2|clean|2": 0.6151348213576571,
+  "layer2|in_prop0.50|0": 0.4196884685460822,
+  "layer2|in_prop0.50|1": 0.21036291576877356,
+  "layer2|in_prop0.50|2": 0.6153622778289846
+ },
+ "seed": 20271004,
+ "source": "records/model_comparison/task_y_detr_merged.jsonl.gz",
+ "versions": [
+  "layer2",
+  "all_layers"
+ ]
+}

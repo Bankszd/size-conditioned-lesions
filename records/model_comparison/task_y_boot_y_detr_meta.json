@@ -1,0 +1,36 @@
+{
+ "arms": [
+  "clean",
+  "in4",
+  "in_m0.02"
+ ],
+ "draws_file": "records/model_comparison/task_y_draws_2000.npy",
+ "model": "detr",
+ "n_boot": 2000,
+ "observed": {
+  "all_layers|clean|0": 0.42172706364471485,
+  "all_layers|clean|1": 0.22448780364462245,
+  "all_layers|clean|2": 0.6151348213576571,
+  "all_layers|in4|0": 0.4041770771257335,
+  "all_layers|in4|1": 0.1786430603468368,
+  "all_layers|in4|2": 0.6159714634063291,
+  "all_layers|in_m0.02|0": 0.4213782462413736,
+  "all_layers|in_m0.02|1": 0.21924066926155494,
+  "all_layers|in_m0.02|2": 0.6151162365355038,
+  "layer2|clean|0": 0.42172706364471485,
+  "layer2|clean|1": 0.22448780364462245,
+  "layer2|clean|2": 0.6151348213576571,
+  "layer2|in4|0": 0.41705220874461046,
+  "layer2|in4|1": 0.20194950672100975,
+  "layer2|in4|2": 0.617274683418785,
+  "layer2|in_m0.02|0": 0.4216609360244125,
+  "layer2|in_m0.02|1": 0.22402184271418912,
+  "layer2|in_m0.02|2": 0.6154536813078286
+ },
+ "seed": 20271004,
+ "source": "records/model_comparison/task_c_detr_full_v2b.jsonl.gz",
+ "versions": [
+  "layer2",
+  "all_layers"
+ ]
+}

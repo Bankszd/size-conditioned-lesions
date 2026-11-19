@@ -1,0 +1,92 @@
+# Checkpoints used by the analyses in this repository.
+#
+# sha256 is the hash of the file used for every number in the paper.  Where the
+# upstream release publishes its own hash we also record the source URL.  The
+# two R101 models and the three modern detectors were identified by their clean
+# AP gate (docs/REPRODUCE.md) rather than by a published file hash, so their
+# sha256 is the hash of the file we evaluated, not an upstream-published value.
+#
+# layer_index is the zero-based decoder cross-attention layer that every
+# local-quality and AP lesion intervenes on unless stated otherwise.
+
+models:
+  detr_r50:
+    name: DETR-R50
+    architecture: dense (Deformable-DETR / DETR reference code)
+    families: [local_quality, detector_ap, model_comparison]
+    file: detr.pth
+    url: https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth
+    sha256: e632da11ec76ae67bac2f8579fbed3724e08dead7d200ca13e019b197784eadc
+    hash_source: upstream filename
+    layer_index: 2
+    num_decoder_layers: 6
+
+  conditional_detr_r50:
+    name: Conditional DETR-R50
+    architecture: dense
+    families: [local_quality, detector_ap, model_comparison]
+    file: conditional_detr.pth
+    url: https://github.com/DeppMeng/ConditionalDETR/releases/download/v1.0/ConditionalDETR_r50_epoch50.pth
+    sha256: ebd17bd934b8b0c75c405cf01d0bad99af8e5df4abaf3d0009de92c208d21d2d
+    hash_source: upstream release asset
+    layer_index: 2
+    num_decoder_layers: 6
+
+  detr_r101:
+    name: DETR-R101
+    architecture: dense
+    families: [layer_replication]
+    file: detr_r101.pth
+    url: https://dl.fbaipublicfiles.com/detr/detr-r101-2c7b67e5.pth
+    sha256: 2c7b67e52d2e687cefa3c4a5e701a148664159c96725c62984600d2d9d5c4104
+    hash_source: evaluated file
+    layer_index: 2
+    num_decoder_layers: 6
+
+  conditional_detr_r101:
+    name: Conditional DETR-R101
+    architecture: dense
+    families: [layer_replication]
+    file: conditional_detr_r101.pth
+    url: https://github.com/DeppMeng/ConditionalDETR/releases/download/v1.0/ConditionalDETR_r101_epoch50.pth
+    sha256: 608de74d77afc666d9e2f1e661c4e5179d6ac02951a32b5cb577794dd9a3231b
+    hash_source: evaluated file
+    layer_index: 2
+    num_decoder_layers: 6
+
+  deimv2_s:
+    name: DEIMv2-S
+    architecture: deformable, multi-scale (official configuration)
+    families: [deformable, fixed_area]
+    file: deimv2_s_coco.safetensors
+    url: https://huggingface.co/Intellindust/DEIMv2-S
+    sha256: f14786359a95c45616f11a77f207ecb97e482481498db994f2f78e74b1d8b8b0
+    hash_source: evaluated file
+    layer_index: 2
+    num_decoder_layers: 4
+    # Official decoder configuration.  The earlier "[5, 8, 11]" wiring used for
+    # one development run is NOT used anywhere in this repository; see
+    # registrations/DEVIATIONS.md.
+    interaction_indexes: [3, 7, 11]
+
+  rtdetrv2_r50vd:
+    name: RT-DETRv2-R50vd
+    architecture: deformable, multi-scale
+    families: [deformable, fixed_area]
+    file: model.safetensors
+    url: https://huggingface.co/PekingU/rtdetr_v2_r50vd
+    sha256: 3331d977dbc0c7a6cdae9ec0b0b6ad156eb6720d65b7cf0fa710dcc541d88d71
+    hash_source: evaluated file
+    layer_index: 2
+    num_decoder_layers: 6
+
+  deformable_detr_r50:
+    name: Deformable DETR-R50
+    architecture: deformable, multi-scale
+    families: [deformable]
+    file: model.safetensors
+    url: https://huggingface.co/SenseTime/deformable-detr
+    sha256: caf1e3e61283c6ce35cd2d9adaa7033cf40997d4dfe434003bcdb9085cc8cf9b
+    hash_source: evaluated file
+    layer_index: 2
+    num_decoder_layers: 6

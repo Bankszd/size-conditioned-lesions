@@ -1,0 +1,21 @@
+{
+ "section": "D1-D3 - Deformable DETR-R50, fixed-area and fixed-count lesions, VOC 2007 test, decoder layer 2",
+ "statistic": "Delta_lesion = E[Q_clean - Q_lesion|small] - E[Q_clean - Q_lesion|large]; 5,000 whole-image percentile resamples, seed 20271001",
+ "script": "experiments/deformable/task_d3.py",
+ "model": "Deformable DETR-R50 (HuggingFace SenseTime/deformable-detr)",
+ "values": {
+  "region2_mass_small": 0.495824,
+  "region2_mass_large": 0.068339,
+  "region2_mass_ratio": 7.2554,
+  "region2_delta": 0.010496,
+  "region2_delta_ci": [0.008318, 0.012746],
+  "four_pairs_delta": 0.000268,
+  "four_pairs_delta_ci": [-0.000414, 0.000941],
+  "mass002_delta": 0.000136,
+  "mass002_delta_ci": [-0.000004, 0.000310],
+  "eligible_small": 328,
+  "eligible_medium": 1652,
+  "eligible_large": 3153
+ },
+ "verdicts": {"D1": "confirmed", "D2": "confirmed", "D3": "confirmed"}
+}

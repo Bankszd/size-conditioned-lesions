@@ -1,0 +1,11 @@
+{
+ "section": "G5 - attention-dose deletion rule, size neutrality of the random saliency map, VOC 2007 test",
+ "statistic": "dAUC = median AUC(small) - median AUC(large) under the random saliency map; 2,000 whole-image percentile resamples, seed 20271001",
+ "script": "experiments/deletion_metrics/task_g5.py, task_g5_rt.py",
+ "models": {
+  "DETR-R50": {"dauc": 0.1288, "ci": [0.1083, 0.1484]},
+  "RT-DETRv2-R50vd": {"dauc": 0.0769, "ci": [0.0490, 0.0935]}
+ },
+ "margin": [-0.05, 0.05],
+ "verdict": "contradicted"
+}

@@ -1,0 +1,9 @@
+{
+ "20-image smoke": "all four arms produced detections on every image, both models, both depths",
+ "Replay of the existing four and m02 arms (20 images x 2 depths x 2 arms)": "DETR 80/80 byte-identical to the original record; Conditional 80/80",
+ "Shard consistency": "5 images per shard replayed on a different GPU; 240 comparisons (2 models x 3 shards x 5 images x 2 depths x 4 arms), 0 mismatches",
+ "Shard merge": "3 contiguous ranges per model concatenate exactly to the 4,000-image holdout list; 4,000 rows, 4,000 unique ids, order identical",
+ "Zero-dose identity (model level)": "DETR logits max abs diff 0.0, boxes 0.0; Conditional logits 0.0, boxes 0.0",
+ "f=0 arm versus clean (20 images x 2 depths)": "DETR 40/40 identical; Conditional 40/40 identical",
+ "prop50 dose accuracy": "max abs deviation from 0.50 x in-box mass: DETR 2.98e-08, Conditional 2.98e-08 (threshold 1e-4)"
+}

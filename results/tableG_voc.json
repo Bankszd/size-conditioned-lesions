@@ -1,0 +1,20 @@
+{
+ "section": "G1-G2 - size neutrality of standard deletion metrics, VOC 2007 test",
+ "statistic": "dAUC = median AUC(small) - median AUC(large) under the random saliency map; 2,000 whole-image percentile resamples, seed 20271001",
+ "script": "experiments/deletion_metrics/task_g5.py, task_g5_rt.py (addendum G code path)",
+ "models": {
+  "DETR-R50": {
+   "fixed_rule_dauc": 0.0061,
+   "fixed_rule_ci": [0.0001, 0.0116],
+   "relative_rule_dauc": 0.8266,
+   "relative_rule_ci": [0.8185, 0.8373]
+  },
+  "RT-DETRv2-R50vd": {
+   "fixed_rule_dauc": 0.0107,
+   "fixed_rule_ci": [-0.0037, 0.0208],
+   "relative_rule_dauc": 0.7094,
+   "relative_rule_ci": [0.6944, 0.7223]
+  }
+ },
+ "verdicts": {"G1": "contradicted", "G2": "confirmed"}
+}

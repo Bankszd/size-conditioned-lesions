@@ -1,0 +1,26 @@
+{
+ "section": "H4 - detector-level size gap on VOC 2007 test, dense models, decoder layer 2, per-query predicted-box lesions",
+ "statistic": "S = dAP_small - dAP_large in COCO percentage points, 2,000 paired whole-image resamples, PCG64 seed 20271001",
+ "script": "experiments/detector_ap/task_c_v2.py (VOC branch); shard summaries in records/detector_ap/",
+ "arms": {
+  "DETR-R50": {
+   "clean": {"AP": 64.273, "AP50": 84.652, "AP75": 70.766, "APs": 34.334, "APm": 49.256, "APl": 73.222},
+   "in4": {"AP": 64.179, "AP50": 84.787, "AP75": 70.435, "APs": 31.860, "APm": 48.983, "APl": 73.193,
+           "S": -2.445, "S_ci": [-3.625, -1.123]},
+   "in_m0.02": {"AP": 64.251, "AP50": 84.643, "AP75": 70.718, "APs": 34.344, "APm": 49.169, "APl": 73.211,
+                "S": 0.021, "S_ci": [-0.268, 0.191]}
+  },
+  "Conditional DETR-R50": {
+   "clean": {"AP": 63.532, "AP50": 85.500, "AP75": 70.276, "APs": 33.448, "APm": 49.415, "APl": 72.125},
+   "in4": {"AP": 63.437, "AP50": 85.588, "AP75": 70.038, "APs": 28.015, "APm": 49.270, "APl": 72.085,
+           "S": -5.392, "S_ci": [-7.898, -1.374]},
+   "in_m0.02": {"AP": 63.523, "AP50": 85.497, "AP75": 70.226, "APs": 33.378, "APm": 49.497, "APl": 72.121,
+                "S": -0.066, "S_ci": [-0.209, 0.061]}
+  }
+ },
+ "saturation": {
+  "DETR-R50": {"queries_total": 443432, "in4_all_in_box_removed": 84072, "in_m002_all_in_box_removed": 4447},
+  "Conditional DETR-R50": {"queries_total": 1337218, "in4_all_in_box_removed": 243843, "in_m002_all_in_box_removed": 4960}
+ },
+ "verdict": "confirmed"
+}

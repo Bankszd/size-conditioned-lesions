@@ -1,0 +1,43 @@
+{
+ "arms": [
+  "clean",
+  "in4",
+  "in_prop0.50",
+  "in_geo0.50"
+ ],
+ "draws_file": "records/model_comparison/task_y_voc12_draws_2000.npy",
+ "model": "detr",
+ "n_boot": 2000,
+ "observed": {
+  "all_layers|clean|0": 0.6454111464366434,
+  "all_layers|clean|1": 0.2532358914430491,
+  "all_layers|clean|2": 0.738686637378827,
+  "all_layers|in4|0": 0.6379491273279083,
+  "all_layers|in4|1": 0.18819309235737786,
+  "all_layers|in4|2": 0.7379803098832534,
+  "all_layers|in_geo0.50|0": 0.6163938940092807,
+  "all_layers|in_geo0.50|1": 0.21561060095094836,
+  "all_layers|in_geo0.50|2": 0.7149426368390108,
+  "all_layers|in_prop0.50|0": 0.6188200101809211,
+  "all_layers|in_prop0.50|1": 0.22670704179971066,
+  "all_layers|in_prop0.50|2": 0.7165068626424521,
+  "layer2|clean|0": 0.6454111464366434,
+  "layer2|clean|1": 0.2532358914430491,
+  "layer2|clean|2": 0.738686637378827,
+  "layer2|in4|0": 0.6436964439203267,
+  "layer2|in4|1": 0.24208108155874802,
+  "layer2|in4|2": 0.7385343394158914,
+  "layer2|in_geo0.50|0": 0.641469996402823,
+  "layer2|in_geo0.50|1": 0.2479379107417067,
+  "layer2|in_geo0.50|2": 0.7361422360626075,
+  "layer2|in_prop0.50|0": 0.6411835509069796,
+  "layer2|in_prop0.50|1": 0.24769808181929406,
+  "layer2|in_prop0.50|2": 0.7358987732916733
+ },
+ "seed": 20271004,
+ "source": "records/model_comparison/task_yv_detr_merged.jsonl.gz",
+ "versions": [
+  "layer2",
+  "all_layers"
+ ]
+}

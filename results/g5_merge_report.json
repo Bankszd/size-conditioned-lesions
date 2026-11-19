@@ -1,0 +1,24 @@
+{
+ "detr": {
+  "file": "task_g5_voc_detr_merged.jsonl.gz",
+  "rows": 25448,
+  "saliency_images": 4908,
+  "extra_rows": 6362,
+  "first": 1,
+  "last": 4952,
+  "size_mb": 21.63,
+  "shard_images": 4952,
+  "shard_rows": 19086
+ },
+ "rt": {
+  "file": "task_g5_voc_rt_merged.jsonl.gz",
+  "rows": 25720,
+  "saliency_images": 4952,
+  "extra_rows": 6430,
+  "first": 1,
+  "last": 4952,
+  "size_mb": 25.18,
+  "shard_images": 4952,
+  "shard_rows": 19290
+ }
+}

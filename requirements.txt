@@ -1,0 +1,17 @@
+# Full environment used for every number in the paper (Python 3.12.3).
+#
+# The analysis in this repository (make tables / make verify / make test) is
+# CPU-only and needs the packages in requirements-cpu.txt.  torch and
+# torchvision are listed here because the GPU re-runs in docs/REPRODUCE.md
+# use exactly these builds.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.8.0
+torchvision==0.23.0
+numpy==2.3.2
+scipy==1.18.1
+pycocotools==2.0.11
+pillow==11.3.0
+PyYAML==6.0.2
+tqdm==4.70.1
+pytest==8.3.4
